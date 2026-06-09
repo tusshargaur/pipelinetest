@@ -1,33 +1,20 @@
-# I am a workflow that demonstrates how to output the different context objects
-
 name: Variables and Context
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
     inputs:
       name:
-        # Friendly description to be shown in the UI instead of 'name'
         description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
+        default: 'Tushar'
         required: true
 
 env:
   VAR1: myworkflowvar1
   VAR2: myworkflowvar2
   VAR3: myworkflowvar3
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
   job1:
     runs-on: ubuntu-latest 
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Dump GitHub context
         env:
