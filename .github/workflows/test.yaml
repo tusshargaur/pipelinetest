@@ -63,8 +63,3 @@ job4:
           echo $VAR3
         env: 
           VAR3: mystepvar3
-    
-  
-      
-      
-      
